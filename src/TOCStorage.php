@@ -23,7 +23,7 @@ class TOCStorage
         $tocGenerator = new TocGenerator();
         $this->tableOfContents = $tocGenerator->getHtmlMenu($fixedContent);
         $this->itemsCount = substr_count($this->tableOfContents, "</li>");
-        $toc = "<br/> <p>Table of Contents</p>" . $this->tableOfContents . "<h2";
+        $toc = "<br/> <p>" . __("Table of Contents", "simpletableofcontents") . "</p>" . $this->tableOfContents . "<h2";
 
         $pos = strpos($fixedContent, "<h2");
 

@@ -1,4 +1,4 @@
-<h3>Table of Contents</h3>
+<h3><?php echo $title; ?></h3>
 
 <?php
 echo $tableOfContents;

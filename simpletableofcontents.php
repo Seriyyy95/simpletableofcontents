@@ -22,6 +22,10 @@ add_filter('the_content', function ($content) {
     return $content;
 });
 
+add_action('init', function () {
+    load_plugin_textdomain('simpletableofcontents', false, basename(plugin_dir_path(__FILE__)) . '/languages');
+});
+
 add_action('widgets_init', function () {
     register_widget(\SimpleTOC\TOCWidget::class);
 });
