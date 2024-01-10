@@ -1,3 +1,4 @@
+<style>
     @media (min-width: 768px) {
         .inside-right-sidebar {
             height: 99%;
@@ -24,3 +25,4 @@
             width: 4px;
         }
     }
+</style>
