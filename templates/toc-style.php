@@ -9,7 +9,7 @@
             top: 89px;
         }
 
-        .widget_simple_toc_widget > ul {
+        .widget_simple_toc_widget > div > ul {
             overflow-y: scroll;
             margin-bottom: 40px;
             max-height: calc(100vh - 250px);
@@ -17,11 +17,11 @@
             padding-left: 20px;
         }
 
-        .widget_simple_toc_widget > ul li {
+        .widget_simple_toc_widget > div > ul li {
             list-style-type: disc;
         }
 
-        .widget_simple_toc_widget > ul::-webkit-scrollbar {
+        .widget_simple_toc_widget > div > ul::-webkit-scrollbar {
             width: 4px;
         }
     }

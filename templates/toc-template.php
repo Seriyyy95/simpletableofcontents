@@ -1,4 +1,7 @@
 <h3><?php echo $title; ?></h3>
 
-<?php
-echo $tableOfContents;
+<div id="simple-toc-widget">
+    <?php
+    echo $tableOfContents;
+    ?>
+</div>

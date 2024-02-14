@@ -60,14 +60,14 @@ class MarkupFixer
      * Fix markup
      *
      * @param string $markup
-     * @param int    $topLevel
-     * @param int    $depth
+     * @param int $topLevel
+     * @param int $depth
      * @return string Markup with added IDs
      * @throws RuntimeException
      */
     public function fix(string $markup, int $topLevel = 1, int $depth = 6): string
     {
-        if (! $this->isFullHtmlDocument($markup)) {
+        if (!$this->isFullHtmlDocument($markup)) {
             $partialID = uniqid('toc_generator_');
             $markup = sprintf("<body id='%s'>%s</body>", $partialID, $markup);
         }
@@ -93,6 +93,7 @@ class MarkupFixer
 
             // Overwrite the id attribute
             $node->setAttribute('id', $id);
+            $node->setAttribute("data-toc-heading", "true");
         }
 
         return $this->htmlParser->saveHTML(
